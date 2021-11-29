@@ -1,0 +1,412 @@
+<html>
+<head>
+<style>
+
+img.im2{
+	width: 73px;
+	height: 54px;
+	margin: 6px 0px 0px 15px;
+	object-fit: contain;
+	float:left;
+
+}
+.top_head{
+	text-align: right;
+	letter-spacing: 0px;
+	float:right;
+	color: #FFFFFF;
+	opacity: 1;
+}
+
+.rect{
+	height:40px;
+	padding:10px 30px;
+	background-color: transparent;
+	border-radius: 20px;
+	border: 1px solid white;
+	align-items:center;
+	opacity: 1;
+}
+.text1{
+	font-family: 'Roboto';
+	font-size:16px;
+	margin:auto;
+	color:white;
+}
+.ul_top_hypers li{
+	
+	display: inline-block;
+	margin-left:20px;
+}
+.column {
+  float: left;
+  
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sample {
+	transition: transform 0.5s;
+}
+.dis{
+	display:none;
+}
+</style>
+
+</head>
+<body>
+<div style="width:100%;height:64px;background-color:#525252; padding-bottom:12px ;padding-top:12px;">
+<img src="assets/white-logo-transparent-background.png" class="im2">
+	<div style="margin-left:554px;">
+		<ul class="ul_top_hypers" style="list-style-type: none;">
+		<li><button class="rect text1"style="background-color:#29626d;">Book now </button></li>
+		<li><button class="rect text1">Prices & Services</button></li>
+		<li><div class="text1">Warranty</div></li>
+		<li><div class="text1">Blog</div></li>
+		<li><div class="text1">Contact Us</div></li>
+		<li><button class="rect text1"style="background-color:#29626d;">Login</button></li>
+		<li><button class="rect text1"style="background-color:#29626d;">Become a Helper</button></li>
+		</ul>
+	</div>
+</div>
+<img src="assets/group-16.png"style="width:100%;height:370px">
+<center><p style="margin-top:40px;color:#4f4f4f;font-family: Roboto;font-size: 36px;font-weight: 500;">FAQs</p></center>
+<div class="row">
+<div class="column " style=";width: 62px;height: 1px; margin: 26px 0 0 696px; background-color: #ccc;"></div>
+<div class="column" style="margin-left:9px; margin-top:14px;">
+<img src="assets/star.png">
+</div>
+<div class="column " style=";width: 62px;height: 1px; margin: 26px 0 0 9px; background-color: #ccc;"></div>
+</div>
+<div style="height:48px;width:498px;text-align: center;fon-family:'Roboto';
+font-size:18px;color:#646464; margin:34px 0 0 534px">
+Whether you are Customer or Service provider, <br>We have tried our best to solve all your queries and questions.
+</div>
+<div style="margin:36px 0 0 307px;">
+	<div class="row">
+	<div class="column">
+	<button id="b1" style="border-color:transparent;background-color:#1d7a8c;font-family:'Roboto'; font-size:24px;
+	color:white;height:66px;width:472px;" onclick="change1()">For Customer</button>
+	</div>
+	<div class="column">
+	<button id="b2" style="background-color:white;color:#646464;border-color:transparent;font-family:'Roboto';
+	font-size:24px;border-bottom-style:solid;height:66px;width:472px;border-bottom-width:5px;
+	border-bottom-color:#1d7a8c;"onclick="change2()">For Service Provider</button>
+	</div>
+	</div>
+	<div style="margin-top:48px;width:894px;" id="ounhide">
+		<div>
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample1" onclick="rotateimg('sample1','dis1')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis1" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample2" onclick="rotateimg('sample2','dis2')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis2" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample3" onclick="rotateimg('sample3','dis3')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis3" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample5" onclick="rotateimg('sample5','dis5')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis5" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample4" onclick="rotateimg('sample4','dis4')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis4" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+	</div>
+	<div style="margin-top:48px;width:894px;" id="ohide">
+		<div>
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample6" onclick="rotateimg('sample6','dis6')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis6" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample7" onclick="rotateimg('sample7','dis7')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis7" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample8" onclick="rotateimg('sample8','dis8')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis8" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample9" onclick="rotateimg('sample9','dis9')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis9" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+		<div style="margin-top:40px;">
+		<div class="column">
+			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample10" onclick="rotateimg('sample10','dis10')">
+		</div>
+		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
+		<div style="font-weight:bold; font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
+		</div>
+		<div class="dis" id="dis10" style="margin-top:22px;font-size:16px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
+		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
+		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
+		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
+		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
+		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
+		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
+		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+		<div style="font-family:'Roboto';font-weight: 500; color:#353548;margin-top:50px; margin-left:567px;">GET OUR NEWSLETTER</div>
+		<div class="row"style="margin-top:16px; margin-left:510px;">
+		<div class="column"><input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
+		color:#565656;font-size: 14px;
+		font-weight: normal;padding: 14px 131px 16px 22px; width:233px;" placeholder="Your Email">
+		<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
+		border-radius: 20px;background-color: #ff7b6d; 
+		font-family: Roboto;font-size: 14px;color: #fff;">Submit</button>
+		</div>
+		</div>
+<div style="width: 1560px;margin-top:53px; height:195px;background-color: #111;">
+<div class="row">
+	<div class="column">
+	<img style="height:92px;with:120px; margin:20px 0px 0px 115px;" src="assets/white-logo-transparent-background.png">
+	</div>
+	<div class="column" style="margin:62px 0px 0px 254px; font-family:'Roboto'; font-size:14px; color:#F1F1F1;">
+	<div class='row'>
+	<div class="column">HOME</div>
+	<div class="column" style="margin-left:60px">ABOUT</div>
+	<div class="column" style="margin-left:60px">TESTIMONY</div>
+	<div class="column" style="margin-left:60px">FAQS</div>
+	<div class="column" style="margin-left:60px">INSURANCEPOLICY</div>
+	<div class="column" style="margin-left:60px">IMPRESSUM</div>
+	</div>
+	</div>
+	<div class="column" style="margin-left:180px; margin-top:62px">
+	<div class="row">
+	<div class="column"><img src="assets/fb.svg"></div>
+	<div class="column"style="margin-left:15px"><img src="assets/insta.png"></div>
+	</div>
+	</div>
+</div>
+<div style=" width: 1320px;
+  height: 1px;
+  margin: 26px 0 0 120px;
+  background-color: #424242;"></div>
+ <pre style="font-style:'Roboto'; font-size:14px; margin-left:536px; margin-top:12px; color:#9BA0A3;">
+©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+</pre>
+</pre>
+</div>
+<script>
+document.getElementById("ohide").style.display="none";
+function rotateimg(z,y){
+	var x = document.getElementById(y);
+	if(x.style.display === "none"){
+	document.getElementById(z).style.transform="rotate(90deg)";
+	x.style.display = "block";
+	}
+	else{
+	document.getElementById(z).style.transform="rotate(0deg)";
+	x.style.display = "none";
+	}
+}
+function change1(){
+	var x=document.getElementById("ounhide"),y=document.getElementById("ohide");
+	var b1=document.getElementById("b1"),b2=document.getElementById("b2");
+	if(x.style.display==="none"){
+			x.style.display="block";
+			b1.style.background="#1d7a8c";
+			b1.style.color="white";
+			b2.style.background="white";
+			b2.style.color="#646464";
+			b2.style.borderBottomColor="#1d7a8c";
+			b2.style.borderBottomStyle="solid";
+			b2.style.borderBottomWidth="5px";
+			y.style.display="none";
+	}
+	
+}function change2(){
+	var x=document.getElementById("ounhide"),y=document.getElementById("ohide");
+	var b1=document.getElementById("b1"),b2=document.getElementById("b2");
+	if(y.style.display==="none"){
+			y.style.display="block";
+			b2.style.background="#1d7a8c";
+			b2.style.color="white";
+			b1.style.background="white";
+			b1.style.color="#646464";
+			b1.style.borderBottomColor="#1d7a8c";
+			b1.style.borderBottomStyle="solid";
+			b1.style.borderBottomWidth="5px";
+			x.style.display="none";
+	}
+	
+}
+
+</script>
+<!-- 
+<button id="b1" style="border-color:transparent;background-color:#1d7a8c;font-family:'Roboto'; font-size:24px;
+	color:white;height:66px;width:472px;" onclick="change1()">For Customer</button>
+	
+	<button id="b2" style="background-color:white;color:#646464;border-color:transparent;font-family:'Roboto';
+	font-size:24px;border-bottom-style:solid;height:66px;width:472px;border-bottom-width:5px;
+	border-bottom-color:#1d7a8c;"onclick="change2()">For Service Provider</button>
+-->
+</body>
+</html>
