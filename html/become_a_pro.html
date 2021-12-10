@@ -1,0 +1,133 @@
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 430px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div style="margin: 23px 0 0 136px; font-family: Roboto;font-size: 24px;
+	font-weight: bold;color:#4f4f4f;">Register Now!</div>
+	
+	<div style="margin:25px 0 0 36px">
+	<input type="text" placeholder="First name"
+	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;
+	background-color:white;padding: 16px 0 18px 16px;">
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="text" placeholder="Last name"
+	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;
+	background-color:white;padding: 16px 0 18px 16px;">
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="email" placeholder="Email Address"
+	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;
+	background-color:white;padding: 16px 0 18px 16px;">
+	</div>
+	<div style="width: 359px;height: 46px;border-radius:4px;margin:15px 0 0 36px;
+	border: solid 1px #c8c8c8;border-color:#C8C8C8;">
+	<input style="width:55px; height:46px;border: solid 1px #c8c8c8;font-family:'Roboto';
+	background-color:#C8C8C8; border-right:transparent; text-align:center;color:#4f4f4f" value="+49">
+	<input style="width:294px;height:40px;border-radius:4px;
+	border:transparent; "type="tel" placeholder="Phone number">
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="password" placeholder="Password"
+	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;
+	background-color:white;padding: 16px 0 18px 16px;">
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="password" placeholder="Confirm password"
+	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;border:solid 1px #c8c8c8;
+	background-color:white;padding: 16px 0 18px 16px;">
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="checkbox" style="height:20px;width:20px;border-radius:4px;
+	background-color:white;">
+	<span style="font-family: Roboto;font-size: 16px;font-weight: normal;
+	color: #4f4f4f;">Send me newsletters from Helperland</span>
+	</div>
+	<div style="margin:15px 0 0 36px">
+	<input type="checkbox" style="height:20px;width:20px;border-radius:4px;
+	background-color:white;">
+	<span style="font-family: Roboto;font-size: 16px;font-weight: normal;
+	color: #4f4f4f;">I accept
+	<a style="color:#1fb6ff;font-family: Roboto;font-size: 16px;font-weight: normal;">terms and conditions</a> & 
+	<a style="color:#1fb6ff;font-family: Roboto;font-size: 16px;font-weight: normal;">privacy policy</a></span>
+	</div>
+	<div class="g-recaptcha" style="margin:15px 0 0 36px" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ" ></div>
+	<button type="Submit" style="margin:20px 0 0 132px;width: 166px;border-radius: 23px;
+	font-family: Roboto;font-size: 16px;font-weight: bold;color:white;
+	background-color: #1d7a8c;height: 46px;border:solid 1px transparent; ">Get Started
+	<img src="assets/arrow123.png" style="margin-left:2px;"></button>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
