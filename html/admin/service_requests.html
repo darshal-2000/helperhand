@@ -1,0 +1,593 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<style>
+.head{
+	background-color:#1FB6FF;
+	height:60px;
+	width:1510px;
+	color:white;
+	
+}
+.column {
+  float: left;
+  
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.side{
+width: 273px;
+height: 1012px;
+margin-left:0px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 2px 0px 6px #0000001A;
+}
+.option{
+height:50px;
+background-color:transparent;
+border-width:0px;
+border-bottom:1px solid #E5E5E5;
+color:#646464;
+font-family: Roboto;
+font-size: 16px;
+font-weight: normal;
+
+}
+.option span{
+margin-left:13px;
+position: absolute;
+margin-top:15px;
+}
+.act{
+color:#1FB6FF;
+}
+.dropbtn {
+
+  cursor: pointer;
+}
+
+.dropdown-content {
+  background-color: #f1f1f1;
+  
+}
+
+.dropdown-content a {
+   height:50px;
+   margin-left:34px;
+   
+   color:#646464;
+   font-family: Roboto;
+   font-size: 15px;
+   font-weight: normal;
+   text-decoration:none;
+  display: block;
+}
+.mystyle{
+
+background-color:transparent;
+border-width:0px;
+background-color: #f1f1f1;
+color:#646464;
+font-family: Roboto;
+font-size: 16px;
+font-weight: normal;
+}
+.display_content{
+background-color:#f2f4f5;
+height:1012px;
+width:1230px;
+}
+.info{
+width: 1185px;
+height: 86px;
+background-color:white;
+margin-top:10px;
+border-radius:4px;
+}
+.inside_info{
+position:absolute;
+margin-top:20px;
+margin-left:10px;
+}
+.complete{
+	width: 82px;
+	height: 24px;
+	background-color:#67b644;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+.cancel{
+	width: 82px;
+	height: 24px;
+	background-color:#FF6B6B;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+.pending{
+	width: 62px;
+	height: 24px;
+	background-color:#1FB6FF;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+.new{
+	width: 42px;
+	height: 24px;
+	background-color:#F2BB37;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding-left: 8px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #646464;
+}
+td{
+	font-weight:normal;
+	height:65px;
+}
+thead th{
+	position:static;
+	top: 0;
+	height:49px;
+	background-color:#f4f4f4;
+}
+.menu_circle{
+height:36px;
+width:36px;
+border-radius:50%;
+background-color:#f4f4f4;
+}
+.test{
+position:absolute;
+margin-top:3px;
+margin-left:13px;
+}
+.test:after {
+  content: '\2807';
+  font-size: 20px;
+}
+.drop-btn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.drop-btn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropd {
+  position: relative;
+  display: inline-block;
+}
+
+.dropd-content {
+  display: none;
+  position: relative;
+  top:-30px;
+  right:90px;
+  background-color: #f1f1f1;
+  min-width: 153px;
+  overflow: auto;
+  box-shadow: 0px 0px 6px #00000040;
+  z-index: 1;
+}
+
+.dropd-content a {
+  color: #646464;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.dropd a:hover {background-color: #ddd;}
+.triangle{
+width: 0;
+height: 0;
+border-left: 25px solid transparent;
+border-right: 25px solid transparent;
+border-bottom: 50px solid #f1f1f1;
+position:relative;
+z-index:2;
+right:8px;
+display:none;
+}
+.show {display: block;}
+.end_of_t{
+font-family: Roboto;
+font-size: 14px;
+font-weight: normal;
+color:#646464;
+position:relative;
+top:4%;
+margin-left:15px;
+}
+.end_of_t button{
+height:40px;
+width:40px;
+border: solid 1px #d6d6d6;
+background-color:white;
+margin-left:-5px;
+}
+.end_of_t .active_page{
+background-color:#565656;
+color:white;
+}
+.copyright{
+font-family: Roboto;
+font-size: 14px;
+font-weight: normal;
+margin-left:20px;
+color: #a2a6a8;
+margin-top:24px;
+}
+</style>
+<link href=
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+      
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" >
+    </script>
+      
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" >
+    </script>
+</head>
+<body>
+<div class="head row">
+<div class="column" style="font-family: SwitzeraADF;font-size: 37.5px;margin-left:15px;
+font-weight: bold;margin-top:8px;">
+helperland
+</div>
+<div class="column" style="margin-left:1125px">
+<img style="margin-top:12px;" src="assets/profile.png">
+</div>
+<div class="column" style="font-family: Roboto;font-size: 16px;font-weight: normal;
+margin-top:22px;margin-left:7px;">
+James Smith
+</div>
+<div class="column">
+<img style="margin-top:15px;margin-left:18px;" src="assets/power.png">
+</div>
+</div>
+<div class="row" style="width:1510px;background-color:#f2f4f5;">
+<div class="column side">
+<div class="option">
+<span>Service Management</span>
+</div>
+<div class="option">
+<span>Role Management</span>
+</div>
+<div class="option dropdown"id="main_class1">
+<span onclick="myFunction('myDropdown1','main_class1','more1')"class="dropbtn">
+Coupon Code Management <img src="assets/more.png" id="more1" style="margin-left:44px;">
+</span>
+</div>
+<div id="myDropdown1" class="dropdown-content">
+    <a>Coupon Codes</a>
+    <a>Usage History</a>
+  </div>
+
+<div class="option">
+<span>Escalation Management</span>
+</div>
+<div class="option act">
+<span>Service Requests</span>
+</div>
+<div class="option">
+<span>Service Providers</span>
+</div>
+<div class="option">
+<span>User Management</span>
+</div>
+<div class="option dropdown"id="main_class2">
+<span onclick="myFunction('myDropdown2','main_class2','more2')"class="dropbtn">
+Finance Module<img src="assets/more.png" id="more2" style="margin-left:126px;">
+</span>
+</div>
+<div id="myDropdown2" class="dropdown-content">
+    <a>All Transactions</a>
+    <a>Generate Payment</a>
+	<a>Customer Invoices</a>
+  </div>
+<div class="option">
+<span>Zip Code Management</span>
+</div>
+<div class="option">
+<span>Rating Management</span>
+</div>
+<div class="option">
+<span>Inquiry Management</span>
+</div>
+<div class="option">
+<span>Newsletter Management</span>
+</div>
+<div class="option dropdown"id="main_class3">
+<span onclick="myFunction('myDropdown3','main_class3','more3')"class="dropbtn">
+Content Management<img src="assets/more.png" id="more3" style="margin-left:80px;">
+</span>
+</div>
+<div id="myDropdown3" class="dropdown-content">
+    <a>Blog</a>
+    <a>FAQs</a>
+  </div>
+</div>
+<div class="column display_content">
+<div style="margin-left:23px;margin-top:29px;">
+<span style="font-family: Roboto;font-size: 22px;font-weight: bold;color: #646464;">
+Service Requests
+</span>
+<span style="margin-left:870px;">
+<button style="width: 132px;height: 36px;background-color:#1fb6ff;  font-family: Roboto;font-size: 14px;
+font-weight: normal;color:white;border-radius: 4px;border-color:transparent;">
+<img src="assets/add.png" style="margin-top:px;margin-right:7px;"><span>Add New User</span>
+</button></span>
+<div class="info">
+<div class="row inside_info">
+<input class="column" type="text" placeholder="Service Id" style="margin-left:10px; width: 110px;height: 46px;border: solid 1px #dedddd;">
+<input class="column" type="text" placeholder="Customer" style="margin-left:20px; width: 127px;height: 46px;border: solid 1px #dedddd;">
+<input class="column" type="text" placeholder="Service Provider" style="margin-left:20px; width: 152px;height: 46px;border: solid 1px #dedddd;">
+<input class="column" type="text" placeholder="Status" style="margin-left:20px; width: 120px;height: 46px;border: solid 1px #dedddd;">
+<div class= 'column' style="width:135px;height:46px;margin-left:20px; border: solid 1px #dedddd;">
+<div class=" row">
+<img class="column" src="assets/blue_calander.png" style="margin:15px 2px 0 10px;">
+<input class="column " id="from" style="margin-left:10px;width:90;height:40;margin-top:5px;border:transparent;"
+ placeholder="From date">
+</div>
+</div>
+
+<div class= 'column' style="width:135px;height:46px;margin-left:20px; border: solid 1px #dedddd;">
+<div class=" row">
+<img class="column" src="assets/blue_calander.png" style="margin:15px 2px 0 10px;">
+<input class="column " id="to" style="margin-left:10px;width:90;height:40;margin-top:5px;border:transparent;"
+ placeholder="To date">
+</div>
+</div>
+<button style=" width: 84px;height: 46px;background-color: #1fb6ff;color:white;margin-left:62px;
+border-color:transparent;border-radius:4px;font-family: Roboto;font-size: 16px;font-weight: normal;">
+Search
+</button>
+<button style=" width: 84px;height: 46px;background-color:white;color:#646464;margin-left:20px;
+border: solid 1px #dedddd;border-radius:4px;font-family: Roboto;font-size: 16px;font-weight: normal;">
+Clear
+</button>
+</div>
+</div>
+<div style="margin-top:5px;width: 864px;height:776px;width: 1185px; border:1px solid #e1e1e1;background-color:white;">
+<table>
+<thead>
+ <tr>
+    <th>Service ID <img src="assets/sort.png" style="margin-left:5px;"></th>
+    <th>Service date <img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Customer details <img src="assets/sort.png" style="margin-left:5px;"></th>
+    <th>Service Provider <img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Status<img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Action</th>
+  </tr>
+ </thead>
+  <tr>
+     <td style="font-weight:normal;">323446</td>
+    <td>
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/clock.png" style="margin-right:7px;"> 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div style="font-weight:normal;">David Bough</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/house.png" style="margin-right:3px;">Musterstrabe 5,12345 Bonn</div></td>
+    <td>
+	
+	</td>
+    <td style="font-weight:normal;"><button class="new">New</button></td>
+    <td>
+	<div class="menu_circle">
+	<div class="test dropd"  class="drop-btn"></div>
+	
+  </div>
+	</div>
+	</td>
+  </tr>
+<tr>
+     <td style="font-weight:normal;">323446</td>
+    <td>
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/clock.png" style="margin-right:7px;"> 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div style="font-weight:normal;">David Bough</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/house.png" style="margin-right:3px;">Musterstrabe 5,12345 Bonn</div></td>
+    <td>
+	<div class="row">
+	<div class="column" style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;"><img style="margin-top:12px;" src="assets/hat.png"></div>
+	<div class="column" style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="font-weight:normal;"><button class="pending">Pending</button></td>
+    <td>
+	<div class="menu_circle">
+	<div class="test dropd" onclick="myFunction1()" class="drop-btn"></div>
+	<div id="triangle" class="triangle"></div>
+	<div id="mymenu"  class="dropd-content">
+    <a>Edit & Reschedule</a>
+    <a>Refund</a>
+	<a>Cancel</a>
+	<a>Change SP</a>
+	<a>Escalate</a>
+	<a>History Log</a>
+	<a>Download Invoice</a>
+	</div>
+	</td>
+  </tr>
+<tr>
+     <td style="font-weight:normal;">323446</td>
+    <td>
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/clock.png" style="margin-right:7px;"> 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div style="font-weight:normal;">David Bough</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/house.png" style="margin-right:3px;">Musterstrabe 5,12345 Bonn</div></td>
+    <td>
+	<div class="row">
+	<div class="column" style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;"><img style="margin-top:12px;" src="assets/hat.png"></div>
+	<div class="column" style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="font-weight:normal;"><button class="complete">Complete</button></td>
+    <td>
+	<div class="menu_circle">
+	<div class="test dropd" onclick="myFunction1()" class="drop-btn"></div>
+	<div id="triangle" class="triangle"></div>
+	</div>
+	</td>
+  </tr>
+<tr>
+     <td style="font-weight:normal;">323446</td>
+    <td>
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/clock.png" style="margin-right:7px;"> 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div style="font-weight:normal;">David Bough</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	<img src="assets/house.png" style="margin-right:3px;">Musterstrabe 5,12345 Bonn</div></td>
+    <td>
+	<div class="row">
+	<div class="column" style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;"><img style="margin-top:12px;" src="assets/hat.png"></div>
+	<div class="column" style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="font-weight:normal;"><button class="cancel">Cancle</button></td>
+    <td>
+	<div class="menu_circle">
+	<div class="test dropd" onclick="myFunction1()" class="drop-btn"></div>
+	<div id="triangle" class="triangle"></div>
+	</div>
+	</td>
+  </tr>
+  
+ </table>
+<div class="row end_of_t">
+<span class="column">Show</span>
+<input class="column" type="text" style="margin-top:-10px;width:58px;height:40px;margin-left:15px;">
+<span class="column" style="margin-left:15px;">Entries</span>
+<div class="column" style="margin-top:-40px;height:40px;width:280px;margin-left:800px;">
+<button><img src="assets/move-1.png"></button>
+<button class="active_page">1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+<button><img src="assets/move-last.png"></button>
+</div>
+</div>
+</div>
+</div>
+<p class="copyright">©2018 Helperland. All rights reserved.</p>
+</div>
+</div>
+<script>
+document.getElementById("myDropdown1").style.display="none";
+document.getElementById("myDropdown2").style.display="none";
+document.getElementById("myDropdown3").style.display="none";
+function myFunction(e,f,g) {
+  var x=document.getElementById(e);
+  var y=document.getElementById(f);
+  var z=document.getElementById(g);
+  console.log(x);
+  x.classList.toggle("mystyle");
+  y.classList.toggle("mystyle");
+  if(x.style.display === "none"){
+	z.style.transform="rotate(90deg)";
+	x.style.display = "block";
+	}
+	else{
+	z.style.transform="rotate(0deg)";
+	x.style.display = "none";
+	}
+}
+function myFunction1() {
+  document.getElementById("mymenu").classList.toggle("show");
+  document.getElementById("triangle").classList.toggle("show");
+}
+
+</script>
+<script>
+        $(document).ready(function() {
+          
+            $(function() {
+                $( "#from" ).datepicker();
+            });
+        })
+        $(document).ready(function() {
+          
+            $(function() {
+                $( "#to" ).datepicker();
+            });
+        })
+    </script>
+</body>
+</html>
