@@ -1,54 +1,160 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 5px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.top{
+	width: 1480px;
+	height: 930px;
+	padding: 10px 15px 0px 17px;
+	background-image:url("assets/add/bg.png");
+}
+img.im2{
+	width: 175px;
+	height: 130px;
+	margin: 0 49px 190px 0;
+	object-fit: contain;
+	float:left;
+
+}
+.top_head{
+	text-align: right;
+	letter-spacing: 0px;
+	float:right;
+	color: #FFFFFF;
+	opacity: 1;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 430px;
+.rect{
+	padding:10px 30px;
+	background-color: transparent;
+	border-radius: 20px;
+	border: 1px solid white;
+	align-items:center;
+	opacity: 1;
+}
+.text1{
+	font-family: 'Roboto';
+	font-size:16px;
+	margin:auto;
+	color:white;
+}
+.ul_top_hypers li{
+	display: inline-block;
+	margin-left:20px;
+}
+.dropbtn {
+            background-color:transparent;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+  
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+  
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:transparent;
+            z-index: 1;
+        }
+  
+  
+        .dropdown-content a:hover {
+            background-color:transparent;
+        }
+  
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+  
+        .dropdown:hover .dropbtn {
+            background-color: transparent;
+        }
+.arrow {
+  border: solid white;
+  bottom:5px;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+ul.tick {
+  list-style: none;
+}
+.tick li:before {
+  content: '✓';
+  color:white;
+}
+.column {
+  float: left;
+  padding: 5px;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
+#frame {
+    width: 40px;
+    height: 40px;
+	margin-top:50px;
+    background-image: url(assets/ellipse-525.png);
+    background-position: center;
+    background-size: cover; }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+#myImg {
+    position: absolute;
+    left: 0;
+    top: 785px;;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    margin: auto; }
+
 </style>
   <script src='https://www.google.com/recaptcha/api.js'></script>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div style="margin: 23px 0 0 136px; font-family: Roboto;font-size: 24px;
-	font-weight: bold;color:#4f4f4f;">Register Now!</div>
+</head>
+<div class="top row">
+<img src="assets/white-logo-transparent-background.png" class="im2">
 	
+		<ul class="ul_top_hypers" style="list-style-type: none; margin-left:500px;">
+		<li><button class="rect text1">Book a Cleaner </button></li>
+		<li><div class="text1">Prices</div></li>
+		<li><div class="text1">Our Guarntee</div></li>
+		<li><div class="text1">Blog</div></li>
+		<li><div class="text1">Contact Us</div></li>
+		<li><button class="rect text1">Login</button></li>
+		<li><button class="rect text1" id="myBtn">Become a Helper</button></li>
+		<li><div class=" text1">
+		 <div class="dropdown">
+            <button class="dropbtn">
+                <img src="assets/flag.png">
+            </button>
+              
+            <div class="dropdown-content">
+                
+                    <img src="assets/flag.png" width="20" height="15">
+					
+            </div>
+			<i class="arrow down"></i>
+        </div>
+		</div></li>
+		</ul>
+	<div style="background-color:white; height:700px;width:430px;margin-top:40px;
+	margin-left:520px;font-family:'Roboto';color:#4f4f4f;position:absolute;">
+	<div style="margin: 23px 0 0 136px;font-size: 24px;
+	font-weight: bold;">Register Now!
+	</div>
 	<div style="margin:25px 0 0 36px">
 	<input type="text" placeholder="First name"
 	style="width: 359px;height: 46px;border: solid 1px #c8c8c8;border-radius:4px;
@@ -100,34 +206,87 @@
 	font-family: Roboto;font-size: 16px;font-weight: bold;color:white;
 	background-color: #1d7a8c;height: 46px;border:solid 1px transparent; ">Get Started
 	<img src="assets/arrow123.png" style="margin-left:2px;"></button>
-  </div>
-
+	<center>
+	<div id="frame">
+    <img id="myImg" src="assets/shape-1.png">
+	</div>
+	</center>
+	</div>
 </div>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+<div  style=" margin: 48px 0px 0px 645px;font-family: Roboto;font-size: 40px;
+font-weight: bold;color:#4f4f4f;">How it works</div>
+<div class="row" style="margin:125px 0 0 460px;font-family: Roboto;
+color:#4f4f4f;">
+<div class="column">
+<div style="font-size: 30px;font-weight: bold;">Register yourself</div>
+<div style="font-size: 18px;margin-top:16px;">Provide your basic information to register<br>
+yourself as a service provider.</div>
+<div style="margin-top:48px;font-size: 18px;">Read more
+<img src="assets/shape-2.png" style="margin-left:10px;width: 29px;height: 9px;"></div>
+</div>
+<div class="column" style="margin-left:158px;"><img src="assets/add/g18.png"></div>
+</div>
+<div class="row" style="margin:0px 0 0 460px;font-family: Roboto;
+color:#4f4f4f;">
+<div class="column"><img src="assets/add/g19.png"></div>
+<div class="column" style="margin-left:126px;">
+<div style="font-size: 30px;font-weight: bold;margin-top:53px;">Get service requests</div>
+<div style="font-size: 18px;margin-top:16px;">You will get service requests from<br>
+customes depend on service area and profile.</div>
+<div style="margin-top:48px;font-size: 18px;">Read more
+<img src="assets/shape-2.png" style="margin-left:10px;width: 29px;height: 9px;"></div>
+</div>
+</div>
+<div class="row" style="margin:0px 0 0 460px;font-family: Roboto;
+color:#4f4f4f;">
+<div class="column">
+<div style="font-size: 30px;font-weight: bold; margin-top:71px;">Complete service</div>
+<div style="font-size: 18px;margin-top:16px;">Accept service requests from your customers<br>
+and complete your work.</div>
+<div style="margin-top:48px;font-size: 18px;">Read more
+<img src="assets/shape-2.png" style="margin-left:10px;width: 29px;height: 9px;"></div>
+</div>
+<div class="column" style="margin-left:158px;margin-top:20px;"><img src="assets/add/g18.png"></div>
+</div>
+<div style="font-family:'Roboto';font-weight: 500; color:#353548;margin-top:50px;margin-left:650px;">GET OUR NEWSLETTER</div>
+		<div class="row"style="margin-top:16px;margin-left:590px">
+		<div class="column"><input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
+		color:#565656;font-size: 14px;height:40px;
+		font-weight: normal;padding: 14px 131px 16px 22px; width:233px;" placeholder="Your Email">
+		<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
+		border-radius: 20px;background-color: #ff7b6d; 
+		font-family: Roboto;font-size: 14px;color: #fff;border: solid 1px transparent;">Submit</button>
+		</div>
+		</div>
+<div style="width: 1510px;margin-top:54px; height:195px;background-color: #111;">
+<div class="row">
+	<div class="column">
+	<img style="height:92px;with:120px; margin:20px 0px 0px 115px;" src="assets/white-logo-transparent-background.png">
+	</div>
+	<div class="column" style="margin:62px 0px 0px 254px; font-family:'Roboto'; font-size:14px; color:#F1F1F1;">
+	<div class='row'>
+	<div class="column">HOME</div>
+	<div class="column" style="margin-left:60px">ABOUT</div>
+	<div class="column" style="margin-left:60px">TESTIMONIALS</div>
+	<div class="column" style="margin-left:60px">FAQS</div>
+	<div class="column" style="margin-left:60px">INSURANCEPOLICY</div>
+	<div class="column" style="margin-left:60px">IMPRESSUM</div>
+	</div>
+	</div>
+	<div class="column" style="margin-left:90px; margin-top:62px">
+	<div class="row">
+	<div class="column"><img src="assets/fb.svg"></div>
+	<div class="column"style="margin-left:15px"><img src="assets/insta.png"></div>
+	</div>
+	</div>
+</div>
+<div style=" width: 1320px;
+  height: 1px;
+  margin: 26px 0 0 120px;
+  background-color: #424242;"></div>
+ <pre style="font-style:'Roboto'; font-size:14px; margin-left:536px; margin-top:12px; color:#9BA0A3;">
+©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+</pre>
+</div>
+</body>
+</html>
