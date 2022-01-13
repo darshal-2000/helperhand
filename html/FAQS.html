@@ -1,110 +1,229 @@
 <html>
 <head>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 <style>
-
+*{
+    margin: 0;
+    padding: 0;
+	font-family:roboto;
+}
 img.im2{
 	width: 73px;
 	height: 54px;
-	margin: 6px 0px 0px 15px;
+	margin: 0px 0px 0px 15px;
 	object-fit: contain;
 	float:left;
 
 }
-.top_head{
-	text-align: right;
-	letter-spacing: 0px;
-	float:right;
-	color: #FFFFFF;
-	opacity: 1;
+html{
+    overflow-x: hidden;
 }
 
-.rect{
-	height:40px;
-	padding:10px 30px;
-	background-color: transparent;
-	border-radius: 20px;
-	border: 1px solid white;
-	align-items:center;
-	opacity: 1;
-}
-.text1{
-	font-family: 'Roboto';
-	font-size:16px;
-	margin:auto;
-	color:white;
-}
-.ul_top_hypers li{
-	
-	display: inline-block;
-	margin-left:20px;
-}
-.column {
-  float: left;
-  
-}
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.sample {
-	transition: transform 0.5s;
-}
 .dis{
 	display:none;
+}
+
+.navbar{
+    background-color: #525252;
+    font-size: 17px;
+    padding: 4px 0px;
+}
+.navbar_main{
+    padding: 0 15px;
+}
+
+.nav-link{
+    padding: 7px 18px !important;
+    margin: 0 5px;
+}
+.nav-item{
+    margin: 0px 4px;
+}
+
+.bg-blue{
+    background-color: #29626D;
+    border: 1px solid #FFFFFF80;
+    margin: 0 5px;
+}
+
+
+
+.navbar_list{
+    justify-content: flex-end;
+}
+.center1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.line1{
+	width: 62px;
+    height: 1px;
+    background-color: #CCCCCC;
+    margin: 0px 8px;
+}
+
+
+
+.footer_section{
+  background-color: #111111;
+  margin-top:53px;
+}
+
+.footer_main{
+  min-height: 130px;
+  height: fit-content;
+}
+.footer_inner{
+  min-width: 85vw;
+  border-bottom: 1px solid #424242;
+  min-height: 130px;
+}
+.footer_mid ul li{
+  margin: 15px;
+  list-style: none;
+}
+.footer_mid ul li a{
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.footer_right{
+  min-width: 106px;
+}
+
+.footer_end{
+  height: 63px;
+  min-height: fit-content;
+}
+
+.footer_end p{
+  color: #9ba0a3;
+  font-size: 14px;
+}
+.footer_end p span a{
+  color: #9ba0a3;
+}
+.question{
+	font-weight:bold;
+	font-size:16px; 
+	margin-top:-25px;
+}
+
+@media (max-width: 1197px){
+    .nav-item{
+        width: fit-content;
+    }
+    .bg-blue{
+        margin: 5px 0px;
+        color: #fff;
+        background-color: transparent;
+    }
+	.navbar_list a{
+        color: #646464 !important;
+
+    }    
+	.temp{
+		display:none;
+	}
+}
+
+@media(max-width: 768px){
+   
+}
+
+@media (max-width : 425px){
+    
 }
 </style>
 
 </head>
 <body>
-<div style="width:100%;height:64px;background-color:#525252; padding-bottom:12px ;padding-top:12px;">
+<nav class="navbar navbar-expand-xl sticky-top" id="navbar">
+<div class="container-fluid navbar_main">
 <img src="assets/white-logo-transparent-background.png" class="im2">
-	<div style="margin-left:554px;">
-		<ul class="ul_top_hypers" style="list-style-type: none;">
-		<li><button class="rect text1"style="background-color:#29626d;">Book now </button></li>
-		<li><button class="rect text1">Prices & Services</button></li>
-		<li><div class="text1">Warranty</div></li>
-		<li><div class="text1">Blog</div></li>
-		<li><div class="text1">Contact Us</div></li>
-		<li><button class="rect text1"style="background-color:#29626d;">Login</button></li>
-		<li><button class="rect text1"style="background-color:#29626d;">Become a Helper</button></li>
-		</ul>
-	</div>
+<button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="#fff"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+                >
+                <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+            </svg>
+  </button>
+    <div class="offcanvas offcanvas-end" id="navbarText" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
+	<div class="offcanvas-body navbar_list">
+                <div class="nav-item bg-blue rounded-pill" >
+                    <a class="nav-link text-light">Book now</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Prices & services</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Warranty</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Blog</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light" >Contact</a>
+                </div>
+                <div class="nav-item bg-blue rounded-pill">
+                    <a class="text-decoration-none text-light nav-link">Login</a>
+                </div>
+                <div class="nav-item bg-blue rounded-pill">
+                    <a class="text-decoration-none text-light nav-link">Become a Helper</a>
+                </div>
+		</div>
+    </div>
 </div>
+</nav>
+
+
 <img src="assets/group-16.png"style="width:100%;height:370px">
-<center><p style="margin-top:40px;color:#4f4f4f;font-family: Roboto;font-size: 36px;font-weight: 500;">FAQs</p></center>
-<div class="row">
-<div class="column " style=";width: 62px;height: 1px; margin: 26px 0 0 696px; background-color: #ccc;"></div>
-<div class="column" style="margin-left:9px; margin-top:14px;">
-<img src="assets/star.png">
+<p class="center1" 
+style="margin-top:40px;color:#4f4f4f;font-family: Roboto;font-size: 36px;font-weight: 500;">
+FAQs
+</p>
+
+<div class="center1" style="width:100%;">
+	<div class="line1"></div>
+	<img src="assets/star.png" alt="" />
+	<div class="line1"></div>
 </div>
-<div class="column " style=";width: 62px;height: 1px; margin: 26px 0 0 9px; background-color: #ccc;"></div>
-</div>
-<div style="height:48px;width:498px;text-align: center;fon-family:'Roboto';
-font-size:18px;color:#646464; margin:34px 0 0 534px">
+
+<div style="text-align: center;fon-family:'Roboto';
+font-size:18px;color:#646464; margin:34px 0 0 0;"class="center1">
 Whether you are Customer or Service provider, <br>We have tried our best to solve all your queries and questions.
 </div>
-<div style="margin:36px 0 0 307px;">
-	<div class="row">
-	<div class="column">
+
+<div style="margin:36px 0 0 0;" class="d-flex flex-column align-items-center justify-content-start">
+	<div class="center1">
+	<div class="">
 	<button id="b1" style="border-color:transparent;background-color:#1d7a8c;font-family:'Roboto'; font-size:24px;
 	color:white;height:66px;width:472px;" onclick="change1()">For Customer</button>
 	</div>
-	<div class="column">
+	<div class="">
 	<button id="b2" style="background-color:white;color:#646464;border-color:transparent;font-family:'Roboto';
 	font-size:24px;border-bottom-style:solid;height:66px;width:472px;border-bottom-width:5px;
 	border-bottom-color:#1d7a8c;"onclick="change2()">For Service Provider</button>
 	</div>
 	</div>
-	<div style="margin-top:48px;width:894px;" id="ounhide">
+	<div style="margin-top:48px;width:894px;"  id="ounhide" >
 		<div>
 		<div class="column">
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample1" onclick="rotateimg('sample1','dis1')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -125,7 +244,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample2" onclick="rotateimg('sample2','dis2')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -146,7 +265,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample3" onclick="rotateimg('sample3','dis3')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -167,7 +286,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample5" onclick="rotateimg('sample5','dis5')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -188,7 +307,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample4" onclick="rotateimg('sample4','dis4')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -211,7 +330,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample6" onclick="rotateimg('sample6','dis6')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -232,7 +351,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample7" onclick="rotateimg('sample7','dis7')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -253,7 +372,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample8" onclick="rotateimg('sample8','dis8')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -274,7 +393,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample9" onclick="rotateimg('sample9','dis9')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -295,7 +414,7 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample10" onclick="rotateimg('sample10','dis10')">
 		</div>
 		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div style="font-weight:bold; font-size:16px;">
+		<div class="question">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
 		</div>
@@ -313,47 +432,67 @@ Whether you are Customer or Service provider, <br>We have tried our best to solv
 		</div>
 	</div>
 </div>
-		<div style="font-family:'Roboto';font-weight: 500; color:#353548;margin-top:50px; margin-left:567px;">GET OUR NEWSLETTER</div>
-		<div class="row"style="margin-top:16px; margin-left:510px;">
-		<div class="column"><input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
-		color:#565656;font-size: 14px;
-		font-weight: normal;padding: 14px 131px 16px 22px; width:233px;" placeholder="Your Email">
-		<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
-		border-radius: 20px;background-color: #ff7b6d; 
-		font-family: Roboto;font-size: 14px;color: #fff;">Submit</button>
-		</div>
-		</div>
-<div style="width: 1560px;margin-top:53px; height:195px;background-color: #111;">
-<div class="row">
-	<div class="column">
-	<img style="height:92px;with:120px; margin:20px 0px 0px 115px;" src="assets/white-logo-transparent-background.png">
-	</div>
-	<div class="column" style="margin:62px 0px 0px 254px; font-family:'Roboto'; font-size:14px; color:#F1F1F1;">
-	<div class='row'>
-	<div class="column">HOME</div>
-	<div class="column" style="margin-left:60px">ABOUT</div>
-	<div class="column" style="margin-left:60px">TESTIMONY</div>
-	<div class="column" style="margin-left:60px">FAQS</div>
-	<div class="column" style="margin-left:60px">INSURANCEPOLICY</div>
-	<div class="column" style="margin-left:60px">IMPRESSUM</div>
-	</div>
-	</div>
-	<div class="column" style="margin-left:180px; margin-top:62px">
-	<div class="row">
-	<div class="column"><img src="assets/fb.svg"></div>
-	<div class="column"style="margin-left:15px"><img src="assets/insta.png"></div>
-	</div>
-	</div>
+<center>
+<div style="margin-top:48px;">
+<div style="font-family:'Roboto'; color:#353548; ">GET OUR NEWSLETTER</div>
+<div>
+<input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
+color:#565656;font-size: 14px;
+font-weight: normal;padding: 14px 131px 16px 22px; width:233px;height:40px;" placeholder="Your Email">
+<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
+border-radius: 20px;background-color: #ff7b6d; 
+font-family: Roboto;font-size: 14px;color: #fff;border: solid 1px transparent;">Submit</button>
 </div>
-<div style=" width: 1320px;
-  height: 1px;
-  margin: 26px 0 0 120px;
-  background-color: #424242;"></div>
- <pre style="font-style:'Roboto'; font-size:14px; margin-left:536px; margin-top:12px; color:#9BA0A3;">
-©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
-</pre>
-</pre>
 </div>
+</center>
+
+
+<div class="footer_section">
+    <div class="footer_main d-flex justify-content-center align-items-center position-relative">
+        <div class="d-flex justify-content-between h-100 align-items-center footer_inner position-relative">
+            <div class="footer_left">
+              <a href="../Homepage/home.html">
+                  <img src="assets/white-logo-transparent-background.png" alt="" height="78" width="106">
+              </a>
+            </div>
+            <div class="footer_mid">
+              <ul class="d-flex p-0 text-center m-0">
+                <li>
+                    <a href="../Homepage/home.html" class="text-decoration-none">HOME</a>
+                </li>
+                <li>
+                    <a href="../About/about.html" class="text-decoration-none">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none">TESTIMONIAL</a>
+                </li>
+                <li>
+                    <a href="../FAQS/faqs.html" class="text-decoration-none">FAQS</a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">INSURANCE POLICY</a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">IMPRESSUM</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_right d-flex align-items-center justify-content-evenly">
+              <a>
+                  <img src="assets/fb.svg">
+              </a>
+              <a>
+                  <img src="assets/insta.png">
+              </a>                                     
+            </div>
+        </div>
+    </div>
+    <div class="footer_end d-flex align-items-center justify-content-center position-relative">
+        <p class="text-center">©2018 Helperland. All rights reserved.<span><a href="" class="text-decoration-none">Terms and Conditions</a></span> | <span><a href="" class="text-decoration-none">Privacy Policy</a></span></p>
+    </div>
+</div>
+
+
 <script>
 document.getElementById("ohide").style.display="none";
 function rotateimg(z,y){
@@ -401,5 +540,8 @@ function change1(){
 
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 </html>
