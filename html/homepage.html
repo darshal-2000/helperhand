@@ -1,118 +1,106 @@
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 <style>
+*{
+    margin: 0;
+    padding: 0;
+	font-family:roboto;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
 .top{
-	width: 1560px;
-	height: 930px;
-	margin: 0 0 87px;
-	padding: 10px 15px 33px 17px;
+	width:100%;
+	height: auto;
 	background-image:url("assets/group-35.png");
 }
 img.im2{
 	width: 175px;
 	height: 130px;
-	margin: 0 49px 190px 0;
 	object-fit: contain;
 	float:left;
+	margin-top:10px;
 
 }
-.top_head{
-	text-align: right;
-	letter-spacing: 0px;
-	float:right;
-	color: #FFFFFF;
-	opacity: 1;
+.inside_column{
+    max-width: fit-content !important;
+    padding: 0px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 10px !important;
 }
 
-.rect{
-	padding:10px 30px;
-	background-color: transparent;
-	border-radius: 20px;
-	border: 1px solid white;
-	align-items:center;
-	opacity: 1;
+.center1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.text1{
-	font-family: 'Roboto';
-	font-size:16px;
-	margin:auto;
-	color:white;
+.navbar{
+    background-color: transparent;
+    font-size: 17px;
+    padding: 4px 0px;
 }
-.ul_top_hypers li{
-	display: inline-block;
-	margin-left:20px;
+.navbar-toggler{
+	margin-left:auto !important;
 }
-.dropbtn {
-            background-color:transparent;
-            color: white;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-  
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-  
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color:transparent;
-            z-index: 1;
-        }
-  
-  
-        .dropdown-content a:hover {
-            background-color:transparent;
-        }
-  
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-  
-        .dropdown:hover .dropbtn {
-            background-color: transparent;
-        }
-.arrow {
-  border: solid white;
-  bottom:5px;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 3px;
-}
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-ul.tick {
-  list-style: none;
-}
-.tick li:before {
-  content: '✓';
-  color:white;
-}
-.column {
-  float: left;
-  padding: 5px;
+.navbar_main{
+    padding: 0 15px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.nav-link{
+    padding: 7px 18px !important;
+    margin: 0 5px;
 }
-#frame {
-    position: relative;
+.nav-item{
+    margin: 0px 4px;
+}
 
+.bg-tra{
+    background-color: transparent;
+    border: 1px solid #FFFFFF80;
+    margin: 0 5px;
+}
+
+
+
+.navbar_list{
+    justify-content: flex-end;
+	margin-top:43px;
+}
+
+
+.blog .card{
+    flex: none !important;
+    width: 357px !important;
+    box-shadow: 0 0 30px 0 #e4ebf0;
+    margin:10px 22px !important;
+    border-radius: 4px;
+}
+
+.cus .card{
+	flex: none !important;
+    width: 357px !important;
+    box-shadow: 0 0 30px 0 #e4ebf0;
+    margin:10px 22px !important;
+    border: none !important;
+    border-left: 3px solid #1d7a8c !important;
+    border-radius: 4px;
+    min-height: 405px;
+}
+
+#frame {	
     width: 40px;
     height: 40px;
-	margin-top:42px;
     background-image: url(assets/ellipse-525.png);
-    background-position: center;
-    background-size: cover; }
+	}
 
 #myImg {
     position: absolute;
@@ -124,88 +112,182 @@ ul.tick {
     display: block;
     margin: auto; }
 
+.footer_section{
+  background-color: #111111;
+  margin-top:53px;
+}
+
+.footer_main{
+  min-height: 130px;
+  height: fit-content;
+}
+.footer_inner{
+  min-width: 85vw;
+  border-bottom: 1px solid #424242;
+  min-height: 130px;
+}
+.footer_mid ul li{
+  margin: 15px;
+  list-style: none;
+}
+.footer_mid ul li a{
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.footer_right{
+  min-width: 106px;
+}
+
+.footer_end{
+  height: 63px;
+  min-height: fit-content;
+}
+
+.footer_end p{
+  color: #9ba0a3;
+  font-size: 14px;
+}
+.footer_end p span a{
+  color: #9ba0a3;
+}
+
+@media (max-width: 1197px){
+    .nav-item{
+        width: fit-content;
+    }
+    .bg-blue{
+        margin: 5px 0px;
+        color: #fff;
+        background-color: transparent;
+    }
+	.navbar_list a{
+        color: #646464 !important;
+
+    }    
+	.temp{
+		display:none;
+	}
+}
+
+@media(max-width: 768px){
+   
+}
+
+@media (max-width : 425px){
+    
+}
+
 </style>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 <head>
 <body>
 <div class="top">
-<img src="assets/white-logo-transparent-background.png" class="im2">
-	
-		<ul class="ul_top_hypers" style="list-style-type: none; margin-left:34%;">
-		<li><button class="rect text1">Book a Cleaner </button></li>
-		<li><div class="text1">Prices</div></li>
-		<li><div class="text1">Our Guarntee</div></li>
-		<li><div class="text1">Blog</div></li>
-		<li><div class="text1">Contact Us</div></li>
-		<li><button class="rect text1">Login</button></li>
-		<li><button class="rect text1">Become a Helper</button></li>
-		<li><div class=" text1">
-		 <div class="dropdown">
-            <button class="dropbtn">
-                <img src="assets/flag.png">
-            </button>
-              
-            <div class="dropdown-content">
-                
-                    <img src="assets/flag.png" width="20" height="15">
-					
-            </div>
-			<i class="arrow down"></i>
-        </div>
-		</div></li>
-		</ul>
-<div style="margin-top: 318px; margin-left: 55px; margin-width: 399px; margin-height: 172px;">
-			<div style="font-family: 'Roboto';
+	<img src="assets/white-logo-transparent-background.png" class="im2">
+<nav class="navbar navbar-expand-xl" id="navbar">
+    <div class="container-fluid navbar_main">
+
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="#fff"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+        >
+        <path
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+        </svg>
+    </button>	
+	<div class="offcanvas offcanvas-end" id="navbarText" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
+	<div class="offcanvas-body navbar_list">
+                <div class="nav-item bg-tra rounded-pill" >
+                    <a class="nav-link text-light">Book now</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Prices & services</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Warranty</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light">Blog</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light" >Contact</a>
+                </div>
+                <div class="nav-item bg-tra rounded-pill">
+                    <a class="text-decoration-none text-light nav-link" id="myBtn">Login</a>
+                </div>
+                <div class="nav-item bg-tra rounded-pill">
+                    <a class="text-decoration-none text-light nav-link">Become a Helper</a>
+                </div>
+		</div>
+    </div>
+	</div>
+</nav>
+<div style="margin-top:178px;margin-left:55px; ">
+		<div style="font-family: 'Roboto';
 			font-size:50px; color:white;">Lorem ipsum text
 		</div>
-		<ul class="text1 tick">
-		<li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-		<li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-		<li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+		<ul style="color:white;list-style: none;margin-left:-30px;">
+		<li>✓Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+		<li>✓Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+		<li>✓Lorem ipsum dolor sit amet, consectetur adipiscing</li>
 		</ul>
 </div>
-<div style="margin-top:46px; margin-left:668px;">
+<div style="margin-top:46px;" class="center1">
 <button style="border: 1px solid #FFFFFF;
 border-radius: 27px; font-size:18px;color:white; 
-font-family: 'Roboto',sans-serif; padding:15px 30px; background-color:#006072; opacity:0.6;"><span>Let's Book a Cleaner</span></button></div>	
+font-family: 'Roboto',sans-serif; padding:15px 30px; background-color:#006072; opacity:0.6;"><span>Let's Book a Cleaner</span></button>
+</div>	
 
-<div class="row" style="margin-top:80px; margin-left:240px;">
-<div class="column">
-	<img src="assets/postcode.svg" style="margin-left:75px;height:55px;width:51px ">
-	<p style="color:white; font-family:'Roboto';font-size:20px; margin-top:50px;">Enter your postcode</p>
+<div class="row justify-content-center" style="margin-top:164px;">
+                    <div class="col inside_column">
+                        <img src="assets/postcode.svg">
+                        <h5 class="mb-0 text-light text-center grid_title">Enter your postcode</h5>                    
+                    </div>
+                    <div class="col arr inside_column">
+                        <img src="assets/step-arrow-1.png">                  
+                    </div>
+                    <div class="col inside_column">
+                        <img src="assets/plan.png" alt="" width="57" height="60">
+                        <h5 class="mb-0 text-light text-center grid_title">Select your plan</h5>
+                    </div>
+                    <div class="col arr inside_column">
+                        <img src="assets/step-arrow-1-copy.png">
+                    </div>
+                    <div class="col inside_column">
+                        <img src="assets/pay.svg">
+                        <h5 class="mb-0 text-light text-center grid_title">Pay securely online</h5>                    
+                    </div>
+                    <div class="col arr inside_column">
+                        <img src="assets/step-arrow-1.png">                   
+                    </div>
+                    <div class="col inside_column">
+                        <img src="assets/enjoy.svg">
+                        <h5 class="mb-0 text-light text-center grid_title">Enjoy amazing service</h5>                    
+                    </div>
+                </div>
+
+<div class="center1">
+<div class="center1" id="frame" style="margin-bottom:33px;margin-top:42px;">
+    <img src="assets/shape-1.png">
 </div>
-<div class="column" >
-	<img src="assets/step-arrow-1.png">
-</div>
-<div class="column">
-	<img src="assets/plan.png" style="margin-left:75px;height:55px;width:51px ">
-	<p style="color:white; font-family:'Roboto';font-size:20px; margin-top:50px; margin-left:30px;">Select Your Plan</p>
-</div>
-<div class="column" >
-	<img src="assets/step-arrow-1-copy.png" style="margin-top:29px;">
-</div>
-<div class="column">
-	<img src="assets/pay.svg" style="margin-left:75px;height:55px;width:51px ">
-	<p style="color:white; font-family:'Roboto';font-size:20px; margin-top:50px; margin-left:30px;">Pay securely online</p>
-</div>
-<div class="column" >
-	<img src="assets/step-arrow-1.png">
-</div>
-<div class="column">
-	<img src="assets/enjoy.svg" style="margin-left:75px;height:55px;width:51px ">
-	<p style="color:white; font-family:'Roboto';font-size:20px; margin-top:50px; margin-left:30px;">Enjoy amazing serices</p>
 </div>
 </div>
-<center>
-<div id="frame">
-    <img id="myImg" src="assets/shape-1.png">
-</div></center>
-</div>
-<div style="margin-top:79px; font-size:48px; color:#4F4F4F; 
-font-family:'Roboto'; font-weight: bold; margin-left:560px;">Why Helperland</div>
-<div style="margin-top:83px;margin-left:230px" class="row">
-	<div class="column">
+
+<p style="margin-top:80px;color:#4f4f4f;
+font-family: 'Roboto';font-size: 40px;font-weight: bold;" class="center1">Why Helperland</p>
+
+<div style="margin-top:83px;" class="center1">
+	<div>
 	<img src="assets/group-21.png" >
-	<div style="margin-top:33; margin-left:28px; width:272px; height: 73px; font-size:30px; 
+	<div style="margin-top:33;  width:272px; height: 73px; font-size:30px; 
 	text-align: center; color:#565656; font-family:'Roboto'; font-weight:bold;">
 		Experience & Vetted Professionals
 	</div>
@@ -215,9 +297,9 @@ font-family:'Roboto'; font-weight: bold; margin-left:560px;">Why Helperland</div
 	extensive network that consistently delivers exceptional results.
 	</div>
 	</div>
-	<div class="column">
+	<div>
 	<img src="assets/group-23.png" >
-	<div style="margin-top:33; margin-left:28px; width:272px; height: 73px; font-size:30px; 
+	<div style="margin-top:33; width:272px; height: 73px; font-size:30px; 
 	text-align: center; color:#565656; font-family:'Roboto'; font-weight:bold;">
 		Secure Online Payment
 	</div>
@@ -227,9 +309,9 @@ font-family:'Roboto'; font-weight: bold; margin-left:560px;">Why Helperland</div
 	manage the booking.
 	</div>
 	</div>
-	<div class="column">
+	<div>
 	<img src="assets/group-24.png" >
-	<div style="margin-top:33; margin-left:28px; width:286px; height: 64px; font-size:30px; 
+	<div style="margin-top:33; width:286px; height: 64px; font-size:30px; 
 	text-align: center; color:#565656; font-family:'Roboto'; font-weight:bold;">
 		Dedicated Customer Service
 	</div>
@@ -240,12 +322,13 @@ font-family:'Roboto'; font-weight: bold; margin-left:560px;">Why Helperland</div
 	</div>
 	</div>
 </div>
+
 <div style="margin-top:107px; font-family:'Roboto'; color:#4F4F4F;">
-	<div class="row">
-		<div class="column">
-		<p style="margin-top:99px;margin-left:199px;width: 378px;height: 72px; 
+	<div class="center1">
+		<div>
+		<p style="margin-top:99px; 
 		font-size:30px; font-weight:bold;"> Lorem ipsum dolor sit amet, consectetur </p>
-		<pre style="width: 642px;height: 241px; font-size:15px; margin-left:200px ">
+		<pre style=" font-size:15px;font-family:roboto; ">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi sapien, 
 suscipit ut accumsan vitae, pulvinar ac libero. 
 
@@ -256,76 +339,85 @@ Integer pretium hendrerit ante quis vehicula.
 Mauris consequat ornare enim, sed lobortis quam ultrices sed.
 		</pre>
 		</div>
-		<div class="column" style="margin-left:85px; margin-top:63px;">
+		<div style="margin-top:63px;">
 			<img src="assets/group-36.png" >
 		</div>
 	</div>
-	<div style="margin-left:720px; font-size:40px; margin-top:8px; font-weight:bold;">Our Blog</div>
-	<div style="margin-top:64px; margin-left:201px;" class="row">
-		<div class="column" style="width: 357px;height: 366px;background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
+	
+<p style="margin-top:80px;color:#4f4f4f;
+font-family: 'Roboto';font-size: 40px;font-weight: bold;" class="center1">Our Blog</p>
+<div class="blog">
+	<div style="margin-top:64px;" class="center1 card-group">
+		<div class="card"  style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
 		<img src="assets/group-28.png">
 		<div style="margin-top:17; margin-left:19px; font-size:20px;
 		font-weight:bold;">Lorem ipsum dolor sit amet</div>
 		<div style="color:#A3A3A3;margin-left:19px; margin-top:8px; font-size:13px;">January 28, 2019</div>
-		<pre style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;width: 288px;height: 82px;">
-Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit. Sed fermentum metus 
+		<p style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;font-family:roboto;
+		height: 82px;">
+Lorem ipsum dolor sit amet, consectetur <br>
+adipiscing elit. Sed fermentum metus <br>
 pulvinar aliquet.
-		</pre>
+		</p>
 		<div style="color:#4F4F4F font-size:18px;margin-left:19px;">
 		Read the post <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
-		<div class="column" style="width: 357px;height: 366px; margin-left:45px;
-		background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
+		<div class="card"  style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
 		<img src="assets/group-29.png">
 		<div style="margin-top:17; margin-left:19px; font-size:20px;
 		font-weight:bold;">Lorem ipsum dolor sit amet</div>
 		<div style="color:#A3A3A3;margin-left:19px; margin-top:8px; font-size:13px;">January 28, 2019</div>
-		<pre style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;width: 288px;height: 82px;">
-Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit. Sed fermentum metus 
+		<p style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;width: 288px;
+		height: 82px;font-family:roboto;">
+Lorem ipsum dolor sit amet, consectetur <br>
+adipiscing elit. Sed fermentum metus <br>
 pulvinar aliquet.
-		</pre>
+		</p>
 		<div style="color:#4F4F4F font-size:18px;margin-left:19px;">
 		Read the post <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
-		<div class="column" style="width: 357px;height: 366px;margin-left:45px;
-		background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
+		<div class="card" style="background: #FFFFFF 0% 0% no-repeat padding-box;box-shadow: 0px 0px 30px #E4EBF0;">
 		<img src="assets/group-30.png">
 		<div style="margin-top:17; margin-left:19px; font-size:20px;
 		font-weight:bold;">Lorem ipsum dolor sit amet</div>
 		<div style="color:#A3A3A3;margin-left:19px; margin-top:8px; font-size:13px;">January 28, 2019</div>
-		<pre style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;width: 288px;height: 82px;">
-Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit. Sed fermentum metus 
+		<p style="margin-left:19px; margin-top:13px; font-size:16px; color:#565656;width: 288px;height: 82px;
+		font-family:roboto;">
+Lorem ipsum dolor sit amet, consectetur <br>
+adipiscing elit. Sed fermentum metus <br>
 pulvinar aliquet.
-		</pre>
+		</p>
 		<div style="color:#4F4F4F font-size:18px;margin-left:19px;">
 		Read the post <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
-	</div>	
+	</div>
+</div>	
 </div>
-<div style="width: 1560px;height:800px;background-color:#F4F5F8;font-family:'Roboto';">
-	<pre style="margin-left:555; font-weight:bold; font-size:40px; color:#4F4F4F;font-family:'Roboto';">
 
-What Our Customers Say
-	</pre>
-	<div class="row" style="margin-top:57px; margin-left:201px;">
-		<div class="column" style="border-radius: 4px; box-shadow: 0 0 30px 0 #e4ebf0; 
-		background-color: #fff; width: 380px; height: 400px;border-left-color: #3f51b5;
+
+
+<p style="margin-top:80px;color:#4f4f4f;
+font-family: 'Roboto';font-size: 40px;font-weight: bold;" class="center1">
+What our customer says
+</p>
+<div class="cus">
+	<div class="card-group center1" style="margin-top:57px;">
+		<div class="card" style="border-radius: 4px; box-shadow: 0 0 30px 0 #e4ebf0; 
+		background-color: #fff; border-left-color: #3f51b5;
 		border-left-style: solid; border-width: 5px;">
 		<img style="margin-left:304px; margin-top:20px;" src="assets/message.png">
 		<div class="row"style="margin-left:38px;">
-		<div class="column"><img src="assets/group-31.png"></div>
-		<div class="column" style="margin-left:8px;">
+		<div class="col"><img src="assets/group-31.png"></div>
+		<div class="col" style="margin-left:-160px;">
 		<div style="font-size:20px; margin-top:12px; color:#4F4F4F; font-weight:bold;">Lary Watson</div>
 		<div style="font-size:12px; margin-top:5px; color:#8E8E8E;">Manchester</div>
 		</div>
+		
 		</div>
-		<pre style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
+		<p style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
 Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit. Sed fermentum 
 metus pulvinar aliquet consequat. Praesent nec 
@@ -333,23 +425,23 @@ malesuada nibh.
 
 Nullam et metus congue, auctor augue 
 sit amet, consectetur tortor. 
-		</pre>
+		</p>
 		<div style="color:#4F4F4F; font-size:18px;margin-left:39px; margin-top:30px;">
 		Read more <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
-		<div class="column" style="border-radius: 4px; margin-left:43px; box-shadow: 0 0 30px 0 #e4ebf0; 
-		background-color: #fff; width: 380px; height: 400px;border-left-color: #3f51b5;
+		<div class="card" style="border-radius: 4px; margin-left:43px; box-shadow: 0 0 30px 0 #e4ebf0; 
+		background-color: #fff;border-left-color: #3f51b5;
 		border-left-style: solid; border-width: 5px;">
 		<img style="margin-left:304px; margin-top:20px;" src="assets/message.png">
 		<div class="row"style="margin-left:38px;">
-		<div class="column"><img src="assets/group-32.png"></div>
-		<div class="column" style="margin-left:8px;">
+		<div class="col"><img src="assets/group-32.png"></div>
+		<div class="col" style="margin-left:-160px;">
 		<div style="font-size:20px; margin-top:12px; color:#4F4F4F; font-weight:bold;">Lary Watson</div>
 		<div style="font-size:12px; margin-top:5px; color:#8E8E8E;">Manchester</div>
 		</div>
 		</div>
-		<pre style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
+		<p style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
 Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit. Sed fermentum 
 metus pulvinar aliquet consequat. Praesent nec 
@@ -357,23 +449,24 @@ malesuada nibh.
 
 Nullam et metus congue, auctor augue 
 sit amet, consectetur tortor. 
-		</pre>
+		</p>
 		<div style="color:#4F4F4F; font-size:18px;margin-left:39px; margin-top:30px;">
 		Read more <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
-		<div class="column" style="border-radius: 4px; margin-left:43px; box-shadow: 0 0 30px 0 #e4ebf0; 
-		background-color: #fff; width: 380px; height: 400px;border-left-color: #3f51b5;
+		<div class="card" style="border-radius: 4px; margin-left:43px; box-shadow: 0 0 30px 0 #e4ebf0; 
+		background-color: #fff;border-left-color: #3f51b5;
 		border-left-style: solid; border-width: 5px;">
 		<img style="margin-left:304px; margin-top:20px;" src="assets/message.png">
 		<div class="row"style="margin-left:38px;">
-		<div class="column"><img src="assets/group-33.png"></div>
-		<div class="column" style="margin-left:8px;">
+		<div class="col"><img src="assets/group-33.png"></div>
+		<div class="col" style="margin-left:-160px;">
 		<div style="font-size:20px; margin-top:12px; color:#4F4F4F; font-weight:bold;">Lary Watson</div>
 		<div style="font-size:12px; margin-top:5px; color:#8E8E8E;">Manchester</div>
 		</div>
+		
 		</div>
-		<pre style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
+		<p style="margin-top:27px; margin-left:39px; font-family:'Roboto'; font-size:16px; color:#565656;">
 Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit. Sed fermentum 
 metus pulvinar aliquet consequat. Praesent nec 
@@ -381,63 +474,84 @@ malesuada nibh.
 
 Nullam et metus congue, auctor augue 
 sit amet, consectetur tortor. 
-		</pre>
+		</p>
 		<div style="color:#4F4F4F; font-size:18px;margin-left:39px; margin-top:30px;">
 		Read more <img src="assets/shape-2.png" style="margin-left:12px;">
 		</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="column" style="margin-left:70; margin-top:57;background-color:#525252;
-		width: 48px; height: 48px; border-radius:50%;">
-		<img src="assets/forma-1.png" style=" margin:18px 14px 20px 15px;">
+</div>
+
+<div class="row" style="display:flex;">
+
+		<div style="margin-left:70; margin-top:57;background-color:#525252;
+		width: 48px; height: 48px; border-radius:50%;"class="center1 temp">	
+		<img src="assets/forma-1.png">
 		</div>
-		<div class="column">
+		<div class="col">
 		<div style="font-family:'Roboto'; color:#353548;margin-top:50px; margin-left:567px;">GET OUR NEWSLETTER</div>
 		<div class="row"style="margin-top:16px; margin-left:510px;">
-		<div class="column"><input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
-		color:#565656;font-size: 14px;
+		<div class="col"><input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
+		color:#565656;font-size: 14px;height:40px;
 		font-weight: normal;padding: 14px 131px 16px 22px; width:233px;" placeholder="Your Email">
 		<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
 		border-radius: 20px;background-color: #ff7b6d; 
-		font-family: Roboto;font-size: 14px;color: #fff;">Submit</button>
+		font-family: Roboto;font-size: 14px;color: #fff;border-color:transparent;">Submit</button>
 		</div>
 		</div>
 		</div>
-		<div class="column" style="margin-top:32px;margin-left:481px;">
+		<div class="col temp" style="margin-top:-120px;margin-left:1427px;">
 		<img src="assets/layer-598.png">
 	</div>
 </div>
-<div style="width: 1560px; height:195px;background-color: #111;">
-<div class="row">
-	<div class="column">
-	<img style="height:92px;with:120px; margin:20px 0px 0px 115px;" src="assets/white-logo-transparent-background.png">
-	</div>
-	<div class="column" style="margin:62px 0px 0px 254px; font-family:'Roboto'; font-size:14px; color:#F1F1F1;">
-	<div class='row'>
-	<div class="column">HOME</div>
-	<div class="column" style="margin-left:60px">ABOUT</div>
-	<div class="column" style="margin-left:60px">TESTIMONY</div>
-	<div class="column" style="margin-left:60px">FAQS</div>
-	<div class="column" style="margin-left:60px">INSURANCEPOLICY</div>
-	<div class="column" style="margin-left:60px">IMPRESSUM</div>
-	</div>
-	</div>
-	<div class="column" style="margin-left:90px; margin-top:62px">
-	<div class="row">
-	<div class="column"><img src="assets/fb.svg"></div>
-	<div class="column"style="margin-left:15px"><img src="assets/insta.png"></div>
-	</div>
-	</div>
+
+<div class="footer_section">
+    <div class="footer_main d-flex justify-content-center align-items-center position-relative">
+        <div class="d-flex justify-content-between h-100 align-items-center footer_inner position-relative">
+            <div class="footer_left">
+              <a href="../Homepage/home.html">
+                  <img src="assets/white-logo-transparent-background.png" alt="" height="78" width="106">
+              </a>
+            </div>
+            <div class="footer_mid">
+              <ul class="d-flex p-0 text-center m-0">
+                <li>
+                    <a href="../Homepage/home.html" class="text-decoration-none">HOME</a>
+                </li>
+                <li>
+                    <a href="../About/about.html" class="text-decoration-none">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none">TESTIMONIAL</a>
+                </li>
+                <li>
+                    <a href="../FAQS/faqs.html" class="text-decoration-none">FAQS</a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">INSURANCE POLICY</a>
+                </li>
+                <li>
+                    <a href="" class="text-decoration-none">IMPRESSUM</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_right d-flex align-items-center justify-content-evenly">
+              <a>
+                  <img src="assets/fb.svg">
+              </a>
+              <a>
+                  <img src="assets/insta.png">
+              </a>                                     
+            </div>
+        </div>
+    </div>
+    <div class="footer_end d-flex align-items-center justify-content-center position-relative">
+        <p class="text-center">©2018 Helperland. All rights reserved.<span><a href="" class="text-decoration-none">Terms and Conditions</a></span> | <span><a href="" class="text-decoration-none">Privacy Policy</a></span></p>
+    </div>
 </div>
-<div style=" width: 1320px;
-  height: 1px;
-  margin: 26px 0 0 120px;
-  background-color: #424242;"></div>
- <pre style="font-style:'Roboto'; font-size:14px; margin-left:536px; margin-top:12px; color:#9BA0A3;">
-©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
-</pre>
-</pre>
-</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 </html>
