@@ -1,6 +1,7 @@
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 <style>
@@ -20,11 +21,178 @@ img.im2{
 html{
     overflow-x: hidden;
 }
-
-.dis{
-	display:none;
+.top_head{
+	text-align: right;
+	letter-spacing: 0px;
+	float:right;
+	color: #FFFFFF;
+	opacity: 1;
 }
 
+.rect{
+	height:40px;
+	padding:10px 30px;
+	background-color: transparent;
+	border-radius: 20px;
+	border: 1px solid white;
+	align-items:center;
+	opacity: 1;
+}
+.text1{
+	font-family: 'Roboto';
+	font-size:16px;
+	margin:auto;
+	color:white;
+}
+
+
+.badge {
+        position: relative;
+        top: -14px;
+        left: -12px;
+		color:white;
+		font-family:'Roboto';
+		font-size:13.5px;
+		background-color:#ff1616;
+		font-weight: bold;
+		height:16px;
+		width:16px;
+		padding: 2px 2px 2px 2px;
+        border: 1px solid black;
+        border-radius: 50%;
+		border: solid 1px transparent;
+    }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding-left: 8px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;color: #646464;
+}
+td{
+	height:65px;
+}
+thead th{
+	position:static;
+	top: 0;
+	height:49px;
+	background-color:#f4f4f4;
+}
+.complete{
+	width: 82px;
+	height: 22px;
+	background-color:#67b644;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+.cancel{
+	width: 82px;
+	height: 22px;
+	background-color:#ff6b6b;
+	color:white;
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: normal;
+	border:1px solid transparent;
+}
+.con{
+	width: 38px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius:50%;
+	border: solid 1px #e1e1e1;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: normal;
+	color:#777777;
+}
+.act{
+	background-color: #1d7a8c;
+	color:white;
+}
+
+.selcted_menu{
+	background-color:#146371;
+}
+
+.dropd {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropd-content {
+  display: none;
+  position: absolute;
+  top:90px;
+  right:10px;
+  background-color: #f1f1f1;
+  min-width: 153px;
+  overflow: auto;
+  box-shadow: 0px 0px 6px #00000040;
+  z-index: 1;
+}
+
+.dropd-content a {
+  color: #646464;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.dropd a:hover {background-color: #ddd;}
+.triangle{
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 25px solid #f1f1f1;
+position:absolute;
+z-index:2;
+top:70px;
+right:25px;
+display:none;
+}
+.show {display: block;}
+
+
+.main_sidebar {
+  width: 250px;
+  min-height:fit-content !important;
+  background-color:#1d7a8c;
+
+}	
+.main_sidebar ul {
+  height: fit-content;
+  background-color: #1d7a8c;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+.main_sidebar ul li {
+  border-top: 1px solid #e1e1e1;
+}
+.main_sidebar ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 17px 15px;
+  display: block;
+}
 .navbar{
     background-color: #525252;
     font-size: 17px;
@@ -47,8 +215,6 @@ html{
     border: 1px solid #FFFFFF80;
     margin: 0 5px;
 }
-
-
 
 .navbar_list{
     justify-content: flex-end;
@@ -111,7 +277,9 @@ html{
 	font-size:16px; 
 	margin-top:-25px;
 }
-
+.temp2{
+	display:none;
+}
 @media (max-width: 1197px){
     .nav-item{
         width: fit-content;
@@ -128,6 +296,9 @@ html{
 	.temp{
 		display:none;
 	}
+	.temp2{
+		display:block;
+	}
 }
 
 @media(max-width: 768px){
@@ -137,13 +308,13 @@ html{
 @media (max-width : 425px){
     
 }
-</style>
 
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-xl sticky-top" id="navbar">
 <div class="container-fluid navbar_main">
-<img src="assets/white-logo-transparent-background.png" class="im2">
+<img src="../assets/white-logo-transparent-background.png" class="im2">
 <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
   <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +332,25 @@ html{
   </button>
     <div class="offcanvas offcanvas-end" id="navbarText" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
 	<div class="offcanvas-body navbar_list">
-                <div class="nav-item bg-blue rounded-pill" >
+	            <div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Dashboard</a>
+                </div>            
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Service History</a>
+                </div>            
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Service Shedule</a>
+                </div>            
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Favourite Pros</a>
+                </div>            
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Invoices</a>
+                </div>            
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Notification</a>
+                </div>
+                <div class="nav-item bg-blue rounded-pill center1" >
                     <a class="nav-link text-light">Book now</a>
                 </div>
                 <div class="nav-item">
@@ -176,11 +365,36 @@ html{
                 <div class="nav-item">
                     <a class="nav-link text-light" >Contact</a>
                 </div>
-                <div class="nav-item bg-blue rounded-pill">
-                    <a class="text-decoration-none text-light nav-link">Login</a>
+                <div class="nav-item temp center1">
+					<div style="width: 1px;height: 48px;
+				background-color: #e1e1e1;"></div>
+				</div>
+				<div class="nav-item temp center1"><img src="assets/notification.png">
+					<span class="badge">5</span>
+				</div>
+				<div class="nav-item temp center1">
+					<div style="width: 1px;height: 48px;
+				background-color: #e1e1e1;"></div>
+				</div>
+				<div class="nav-item temp center1 drop-btn" onclick="myFunction1()">
+					<img src="assets/profile.png">
+				<img src="assets/down_arrow.png" style="margin-left:7px;">
+				</div>
+				<div class="temp">
+				<div id="triangle" class="triangle"></div>
+				<div id="mymenu"  class="dropd-content">
+				<div class="center1" style="font-size:14px">welcome,</div>
+				<div class="center1" style="font-size:14px;font-weight:bold;"> Gaurang</div>
+				<a>My Dashboard</a>
+				<a>My settings</a>
+				<a>logout</a>
+				</div>
+				</div>
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">My Settings</a>
                 </div>
-                <div class="nav-item bg-blue rounded-pill">
-                    <a class="text-decoration-none text-light nav-link">Become a Helper</a>
+				<div class="nav-item bg-blue rounded-pill temp2" >
+                    <a class="nav-link text-light">Logout</a>
                 </div>
 		</div>
     </div>
@@ -188,272 +402,283 @@ html{
 </nav>
 
 
-<img src="assets/group-16.png"style="width:100%;height:370px">
-<p class="center1" 
-style="margin-top:40px;color:#4f4f4f;font-family: Roboto;font-size: 36px;font-weight: 500;">
-FAQs
-</p>
+<div style="width:100%;height:120px;background-color:#f9f9f9;padding-top:40px;">
+<p style="font-family:'Roboto';font-size:30px;color:#4f4f4f;" class="center1">
+Welcome,<b>Guarang!</b>
+</p></div>
 
-<div class="center1" style="width:100%;">
-	<div class="line1"></div>
-	<img src="assets/star.png" alt="" />
-	<div class="line1"></div>
-</div>
 
-<div style="text-align: center;fon-family:'Roboto';
-font-size:18px;color:#646464; margin:34px 0 0 0;"class="center1">
-Whether you are Customer or Service provider, <br>We have tried our best to solve all your queries and questions.
-</div>
-
-<div style="margin:36px 0 0 0;" class="d-flex flex-column align-items-center justify-content-start">
-	<div class="center1">
-	<div class="">
-	<button id="b1" style="border-color:transparent;background-color:#1d7a8c;font-family:'Roboto'; font-size:24px;
-	color:white;height:66px;width:472px;" onclick="change1()">For Customer</button>
+<div class="d-flex justify-content-center" style="margin-top:30px;">
+       <div class="main_sidebar temp">
+                <ul class="inside_sidebar">
+                    <li>
+                        <a class="text-light" id="dashBoard">Dashboard</a>
+                    </li>
+                    <li style="background-color: #146371;">
+                        <a id="serviceHistory" class="text-light" >Service History</a>
+                    </li>
+                    <li>
+                        <a id="serviceSchedule" class="text-light">Service Schedule</a>
+                    </li>
+                    <li>
+                        <a id="favouritePros" class="text-light">Favourite Pros</a>
+                    </li>
+                    <li>
+                        <a id="notification" class="text-light">Notification</a>
+                    </li>
+                </ul>
+            </div>
+<div  style="margin-left:15px;">
+<span style="font-family:'Roboto';font-weight:bold;color:#646464;font-size:22px">
+Service History
+</span>
+<span style="margin-left:639px;">
+<button style="background-color:#29626d;color:white;font-size:14px;border-radius: 20px;border: 1px solid white;
+font-family:'Roboto';font-weight:normal;height:34px;width:70px;">
+Export</button></span>
+<div style="margin-top:5px;width:100%;height:fit-contentpx; border:1px solid #e1e1e1;">
+<table>
+<thead>
+ <tr>
+    <th>Service Detail <img src="assets/sort.png" style="margin-left:5px;"></th>
+    <th>Service Provider <img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Payment <img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Status <img src="assets/sort.png" style="margin-left:5px;"></th>
+	<th>Rate SP</th>
+  </tr>
+ </thead>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
 	</div>
-	<div class="">
-	<button id="b2" style="background-color:white;color:#646464;border-color:transparent;font-family:'Roboto';
-	font-size:24px;border-bottom-style:solid;height:66px;width:472px;border-bottom-width:5px;
-	border-bottom-color:#1d7a8c;"onclick="change2()">For Service Provider</button>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
 	</div>
 	</div>
-	<div style="margin-top:48px;width:894px;"  id="ounhide" >
-		<div>
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample1" onclick="rotateimg('sample1','dis1')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis1" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample2" onclick="rotateimg('sample2','dis2')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis2" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample3" onclick="rotateimg('sample3','dis3')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis3" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample5" onclick="rotateimg('sample5','dis5')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis5" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample4" onclick="rotateimg('sample4','dis4')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis4" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
 	</div>
-	<div style="margin-top:48px;width:894px;" id="ohide">
-		<div>
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample6" onclick="rotateimg('sample6','dis6')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis6" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample7" onclick="rotateimg('sample7','dis7')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis7" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample8" onclick="rotateimg('sample8','dis8')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis8" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample9" onclick="rotateimg('sample9','dis9')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis9" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
-		<div style="margin-top:40px;">
-		<div class="column">
-			<img src="assets/vector-smart-object-copy.png" class="sample" id="sample10" onclick="rotateimg('sample10','dis10')">
-		</div>
-		<div  style="font-family:'Roboto'; color:#646464;margin-left:40px;">
-		<div class="question">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Vestibulum nisl nunc, iaculis mattis tellus ac ut non imperdiet velit?
-		</div>
-		<div class="dis" id="dis10" style="margin-top:22px;font-size:16px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id diam tincidunt, fringilla ante vitae, 
-		dapibus velit. Vivamus id tortor rhoncus, efficitur quam at, suscipit tortor. Integer fermentum 
-		convallis eros vel semper. Ut non imperdiet velit. Praesent eu dui vel lacus porta eleifend eget quis 
-		dui. Integer tempus massa in gravida tincidunt. Fusce in libero tristique, euismod nisi vel, 
-		luctus urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec et placerat arcu. 
-		Suspendisse lacinia tristique massa. Etiam risus justo, scelerisque id arcu eu, sodales tempor eros. 
-		Aliquam efficitur pretium urna, sit amet congue risus malesuada rutrum. Donec id massa vel velit 
-		ullamcorper accumsan ut eget nisl. Fusce viverra commodo lacus, sit amet facilisis leo luctus dictum. 
-		</div>
-		</div>
-		</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="cancel">cancelled</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
 	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
+	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
+	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
+	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
+	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+  <tr>
+    <td style="font-weight:normal;">
+	<div><img src="assets/calander.png" style="margin-right:7px;">09/04/2018</div>
+	<div style="margin-top:11px;font-weight:normal;">
+	 12:00 - 18:00</div>
+	</td>
+    <td>
+	<div class="center1" style="margin-left:-100px;">
+	<div  style=" border-radius: 50%;  width: 44px;border:1px solid #aaaaaa;text-align: center;
+    height: 44px;background-color:white;">
+	<img style="margin-top:12px;" src="assets/hat.png">
+	</div>
+	<div style="margin-left:12px">
+	<div style=" font-family: Roboto;font-size: 16px;font-weight:normal;">Lyum Watson</div>
+	<div style="margin-top:4px;">
+	<img src="assets/fill-star.png"><img src="assets/fill-star.png"><img src="assets/fill-star.png">
+	<img src="assets/fill-star.png"><img src="assets/empty-star.png">
+	</div>
+	</div>
+	</div>
+	</td>
+    <td style="color:#1d7a8c; font-size:20px;">
+	€63
+	</td>
+    <td style="font-weight:normal;"><button class="complete">completed</button></td>
+    <td>
+	<button style="background-color:#6da9b5;color:white;font-size:14px;border-radius: 20px;
+	border: 1px solid transparent;font-family:'Roboto';font-weight:normal; width: 70px;height: 34px;">Rate SP</button></td>
+  </tr>
+ </table>
 </div>
-<center>
-<div style="margin-top:48px;">
-<div style="font-family:'Roboto'; color:#353548; ">GET OUR NEWSLETTER</div>
-<div>
-<input style="border-radius:20px;border: solid 1px #565656;background-color: #f4f5f8; 
-color:#565656;font-size: 14px;
-font-weight: normal;padding: 14px 131px 16px 22px; width:233px;height:40px;" placeholder="Your Email">
-<button style="width: 88px;height: 40px;margin: 20px 0px 0px 11px;
-border-radius: 20px;background-color: #ff7b6d; 
-font-family: Roboto;font-size: 14px;color: #fff;border: solid 1px transparent;">Submit</button>
+<div style="margin-top:23px;font-family: Roboto;color:#646464;
+  font-size: 14px;font-weight: normal;" class="center1">
+  <span>Show</span>
+  <span style="margin-left:10px">
+  <select style="width: 62px;height: 38px;">
+  <option>10</option>
+  <option>20</option>
+  </select>
+  </span>
+  <span style="margin-left:10px">entries</span>
+  <span style="margin-left:10px">Total Record: 55</span>
+  <span class="con" style="margin-left:auto;"><img src="assets/move-1.png"></span>
+  <span class="con act" style="margin-left:3px;">1</span>
+  <span class="con" style="margin-left:3px;">2</span>
+  <span class="con" style="margin-left:3px;">3</span>
+  <span class="con" style="margin-left:3px;">4</span>
+  <span class="con" style="margin-left:3px;"><img src="assets/next.png"></span>
+  <span class="con" style="margin-left:3px;"><img src="assets/move-last.png"></span>
 </div>
 </div>
-</center>
-
-
-
+</div>
 <div class="footer_section">
     <div class="footer_main d-flex justify-content-center align-items-center position-relative">
         <div class="d-flex justify-content-between h-100 align-items-center footer_inner position-relative">
             <div class="footer_left">
               <a>
-                  <img src="assets/white-logo-transparent-background.png" alt="" height="78" width="106">
+                  <img src="../assets/white-logo-transparent-background.png" alt="" height="78" width="106">
               </a>
             </div>
             <div class="footer_mid">
@@ -480,10 +705,10 @@ font-family: Roboto;font-size: 14px;color: #fff;border: solid 1px transparent;">
             </div>
             <div class="footer_right d-flex align-items-center justify-content-evenly">
               <a>
-                  <img src="assets/fb.svg">
+                  <img src="../assets/fb.svg">
               </a>
               <a>
-                  <img src="assets/insta.png">
+                  <img src="../assets/insta.png">
               </a>                                     
             </div>
         </div>
@@ -493,54 +718,12 @@ font-family: Roboto;font-size: 14px;color: #fff;border: solid 1px transparent;">
     </div>
 </div>
 
-
 <script>
-document.getElementById("ohide").style.display="none";
-function rotateimg(z,y){
-	var x = document.getElementById(y);
-	if(x.style.display === "none"){
-	document.getElementById(z).style.transform="rotate(90deg)";
-	x.style.display = "block";
-	}
-	else{
-	document.getElementById(z).style.transform="rotate(0deg)";
-	x.style.display = "none";
-	}
+function myFunction1() {
+  document.getElementById("mymenu").classList.toggle("show");
+  document.getElementById("triangle").classList.toggle("show");
 }
-function change1(){
-	var x=document.getElementById("ounhide"),y=document.getElementById("ohide");
-	var b1=document.getElementById("b1"),b2=document.getElementById("b2");
-	if(x.style.display==="none"){
-			x.style.display="block";
-			b1.style.background="#1d7a8c";
-			b1.style.color="white";
-			b2.style.background="white";
-			b2.style.color="#646464";
-			b2.style.borderBottomColor="#1d7a8c";
-			b2.style.borderBottomStyle="solid";
-			b2.style.borderBottomWidth="5px";
-			y.style.display="none";
-	}
-	
-}function change2(){
-	var x=document.getElementById("ounhide"),y=document.getElementById("ohide");
-	var b1=document.getElementById("b1"),b2=document.getElementById("b2");
-	if(y.style.display==="none"){
-			y.style.display="block";
-			b2.style.background="#1d7a8c";
-			b2.style.color="white";
-			b1.style.background="white";
-			b1.style.color="#646464";
-			b1.style.borderBottomColor="#1d7a8c";
-			b1.style.borderBottomStyle="solid";
-			b1.style.borderBottomWidth="5px";
-			x.style.display="none";
-	}
-	
-}
-
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
